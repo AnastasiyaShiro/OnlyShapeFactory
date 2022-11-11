@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<VBox alignment="CENTER" prefHeight="362.0" prefWidth="405.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Canvas fx:id="Canv" height="200.0" onMouseClicked="#onMouseClickedRect" width="200.0" />
+      <FlowPane prefHeight="85.0" prefWidth="365.0">
+         <children>
+            <Button fx:id="But" mnemonicParsing="false" onAction="#butttonForArc" prefHeight="42.0" prefWidth="78.0" text="Замкнутая дуга" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#butttonForOval" prefHeight="42.0" prefWidth="72.0" text="Овал" />
+            <Button mnemonicParsing="false" onAction="#butttonForPolygon" prefHeight="40.0" prefWidth="76.0" text="Полигон" />
+            <Button mnemonicParsing="false" onAction="#butttonForRectangle" prefHeight="42.0" prefWidth="112.0" text="Прямоугольник" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#butttonForRoundRectangle" prefHeight="50.0" prefWidth="109.0" text="Скругленный прямоугольник" textAlignment="CENTER" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#buttonClear" prefHeight="48.0" prefWidth="94.0" text="Очистить" />
+            <ColorPicker fx:id="colorPicer" onAction="#changeColor">
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <TextField fx:id="nameShape" onMouseEntered="#onMouseEntered" prefHeight="25.0" prefWidth="160.0" text="Введите название фигуры" />
+         </children>
+      </FlowPane>
+   </children>
+</VBox>
